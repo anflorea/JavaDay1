@@ -42,12 +42,12 @@ public class QuickSort {
         awesomeArray[8] = "Daineanu";
         awesomeArray[9] = "Mark";
         System.out.println("\t\tBefore Sort:");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < awesomeArray.length; i++) {
             System.out.println(awesomeArray[i]);
         }
         QuickSort.quickSort(awesomeArray, 0, awesomeArray.length - 1);
         System.out.println("\t\tAfter Sort:");
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < awesomeArray.length; i++) {
             System.out.println(awesomeArray[i]);
         }
     }
