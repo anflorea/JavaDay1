@@ -33,29 +33,47 @@ public class Hero extends Character {
             this.setDamage(this.getDamage() + axe.getDamage());
         }
     }
+
+    public boolean equals(Object anObject) {
+        if (anObject == null)
+            return false;
+        else if (this == anObject)
+            return true;
+        else if (anObject instanceof Hero) {
+            Hero aHero = (Hero) anObject;
+            if (aHero.getId() == this.getId())
+                return true;
+        }
+        return false;
+    }
 }
 
 class Mage extends Hero {
     public Mage(String name) {
         this.setName(name);
         this.setLevel(1);
+        this.setId(++Character.idIterator);
     }
 
     public Mage(String name, int level) {
         this.setName(name);
         this.setLevel(level);
+        this.setId(++Character.idIterator);
     }
+
 }
 
 class Knight extends Hero {
     public Knight(String name) {
         this.setName(name);
         this.setLevel(1);
+        this.setId(++Character.idIterator);
     }
 
     public Knight(String name, int level) {
         this.setName(name);
         this.setLevel(level);
+        this.setId(++Character.idIterator);
     }
 }
 
@@ -63,11 +81,13 @@ class Elf extends Hero {
     public Elf(String name) {
         this.setName(name);
         this.setLevel(1);
+        this.setId(++Character.idIterator);
     }
 
     public Elf(String name, int level) {
         this.setName(name);
         this.setLevel(level);
+        this.setId(++Character.idIterator);
     }
 }
 
@@ -75,10 +95,12 @@ class Orc extends Hero {
     public Orc(String name) {
         this.setName(name);
         this.setLevel(1);
+        this.setId(++Character.idIterator);
     }
 
     public Orc(String name, int level) {
         this.setName(name);
         this.setLevel(level);
+        this.setId(++Character.idIterator);
     }
 }

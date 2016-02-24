@@ -3,14 +3,24 @@ package ro.academyplus;
 /**
  * Created by Flo on 23-Feb-16.
  */
-public class Character {
+public abstract class Character {
     private int health = 100;
     private int level;
     private int damage = 1;
     private String name;
+    private int id;
+    static int idIterator;
 
     public String toString() {
-        return (name.toString() + " has level " + level + ", has " + health + " HP and can deal " + damage * level + " damage.");
+        return ("ID(" + id + ") " + name + " has level " + level + ", has " + health + " HP and can deal " + damage * level + " damage.");
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    protected void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
